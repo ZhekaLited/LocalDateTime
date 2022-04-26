@@ -1,0 +1,22 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.Date;
+
+public class Date {
+    public static void main(String[] args) {
+        LocalDate date = LocalDate.now();
+        System.out.println(date);
+
+        LocalDateTime time = LocalDateTime.now();
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+        System.out.println(dateTimeFormatter.format(time));
+
+        Calendar calendar = new GregorianCalendar();
+        java.util.Date dateNow = new Date();
+        System.out.println(dateNow);
+    }
+}
